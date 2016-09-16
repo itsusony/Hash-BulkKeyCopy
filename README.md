@@ -7,7 +7,7 @@ Hash::BulkKeyCopy - a xs module for clone hash with keys
     use Hash::BulkKeyCopy;
 
 # USAGE
-my $ht\_ka = \["k1\_1", "k1\_2", "k1\_3"\];  
+my $ht\_ka = \["k1\_1", "k1\_2", "k1\_3"\]; # it will use src\_hash's keys when give an empty array  
 my $hs\_ka = \["k2\_1", "k2\_2", "k2\_3"\];  
 
 my ($h1, $h2) = ({}, {"k2\_1" => 1, "k2\_2" => undef, "k2\_3" => \[\]});  

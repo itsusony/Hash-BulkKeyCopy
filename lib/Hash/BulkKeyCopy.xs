@@ -29,14 +29,14 @@ PREINIT:
 PPCODE:
     ht_kl = av_len(hash_target_keyarr) + 1;
     hs_kl = av_len(hash_src_keyarr) + 1;
-    if (ht_kl != hs_kl || hs_kl == 0) return;
-    for(i=0;i<ht_kl;i++) {
+    if (hs_kl == 0 || (ht_kl > 0 && hs_kl != ht_kl)) return;
+    for(i=0;i<hs_kl;i++) {
         ptr1 = av_fetch(hash_target_keyarr, i, 0);
         ptr2 = av_fetch(hash_src_keyarr, i, 0);
-        k1 = SvPV(*ptr1, k1size);
+        k1 = ptr1 == NULL ? NULL : SvPV(*ptr1, k1size);
         k2 = SvPV(*ptr2, k2size);
         src_value = hv_fetch(hash_src, k2, k2size, 0);
         if (src_value) {
-            (void)hv_store(hash_target, k1, k1size, newSVsv(*src_value), 0);
+            (void)hv_store(hash_target, k1?k1:k2, k1?k1size:k2size, newSVsv(*src_value), 0);
         }
     }
