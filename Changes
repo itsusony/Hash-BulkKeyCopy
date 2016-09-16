@@ -2,6 +2,10 @@ Revision history for Perl extension Hash-BulkKeyCopy
 
 {{$NEXT}}
 
+0.011 2016-09-16T06:41:23Z
+    - typo fix
+    - add usage
+
 0.01 2016-09-16T06:02:50Z
 
     - original version
