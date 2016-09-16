@@ -2,6 +2,9 @@ Revision history for Perl extension Hash-BulkKeyCopy
 
 {{$NEXT}}
 
+0.021 2016-09-16T07:26:09Z
+    - usage format fix
+
 0.02 2016-09-16T07:20:09Z
     - target hash's keys can be an empty array
 
