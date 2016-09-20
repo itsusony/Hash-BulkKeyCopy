@@ -47,6 +47,7 @@
       },
       "test" : {
          "requires" : {
+            "Test::LeakTrace" : "0.15",
             "Test::More" : "0.98"
          }
       }
@@ -63,6 +64,6 @@
          "web" : "https://github.com/itsusony/Hash-BulkKeyCopy"
       }
    },
-   "version" : "0.021",
+   "version" : "0.022",
    "x_authority" : "cpan:ITSUSONY"
 }

@@ -2,6 +2,10 @@ Revision history for Perl extension Hash-BulkKeyCopy
 
 {{$NEXT}}
 
+0.022 2016-09-20T02:13:23Z
+    - add deps of Test::LeakTrace
+    - edit readme
+
 0.021 2016-09-16T07:26:09Z
     - usage format fix
 

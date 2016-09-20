@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Exporter 'import';
 
-our $VERSION = "0.021";
+our $VERSION = "0.022";
 
 our @EXPORT_OK = qw/hash_bulk_keycopy/;
 
@@ -26,11 +26,11 @@ Hash::BulkKeyCopy - a xs module for clone hash with keys
 
 =head1 USAGE
 
-my $ht_ka = ["k1_1", "k1_2", "k1_3"]; # it will use src_hash's keys when give an empty array  
-my $hs_ka = ["k2_1", "k2_2", "k2_3"];  
-    
-my ($h1, $h2) = ({}, {"k2_1" => 1, "k2_2" => undef, "k2_3" => []});  
-hash_bulk_keycopy($h1, $h2, $ht_ka, $hs_ka);  
+    my $ht_ka = ["k1_1", "k1_2", "k1_3"]; # it will use src_hash's keys when give an empty array   
+    my $hs_ka = ["k2_1", "k2_2", "k2_3"];   
+       
+    my ($h1, $h2) = ({}, {"k2_1" => 1, "k2_2" => undef, "k2_3" => []});   
+    hash_bulk_keycopy($h1, $h2, $ht_ka, $hs_ka);   
 
 =head1 DESCRIPTION
 
